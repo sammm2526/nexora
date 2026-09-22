@@ -1,3 +1,6 @@
+import { HeroSceneCanvas } from "@/components/three";
+import { Badge, Card } from "@/components/ui";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 flex flex-col justify-between">
@@ -13,20 +16,21 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Checkpoint 1 · Initialized
-            </span>
+            <Badge variant="success" pulse>
+              Checkpoint 2 · 3D Foundation
+            </Badge>
           </div>
         </div>
       </header>
 
       {/* Main Hero Section */}
-      <main className="flex-1 flex flex-col items-center justify-center px-6 py-20">
-        <div className="max-w-3xl w-full text-center space-y-8">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 sm:py-16">
+        <div className="max-w-4xl w-full text-center space-y-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60">
-            Conversational AI Platform for SaaS
+          <div className="inline-flex">
+            <Badge variant="accent">
+              Conversational AI Platform for SaaS
+            </Badge>
           </div>
 
           {/* Heading */}
@@ -39,50 +43,41 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Interactive 3D Hero Experience */}
+          <div className="relative pt-2 pb-2">
+            <HeroSceneCanvas className="shadow-2xl shadow-indigo-500/10 border border-zinc-200/80 dark:border-zinc-800/80 bg-gradient-to-b from-white/60 to-white/20 dark:from-zinc-900/50 dark:to-zinc-950/20 backdrop-blur-md" />
+            <div className="mt-3 flex items-center justify-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-ping" />
+              <span>Procedural AI Neural Core &middot; Move pointer or drag to interact</span>
+            </div>
+          </div>
+
           {/* Foundation Architecture Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 text-left">
-            <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-              <div className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-1">
-                Frontend Core
-              </div>
-              <div className="text-base font-semibold text-zinc-900 dark:text-white">
-                Next.js & React
-              </div>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                App Router architecture with TypeScript
-              </p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 text-left">
+            <Card
+              eyebrow="Frontend Core"
+              title="Next.js & React 19"
+              description="App Router architecture with strict TypeScript and server/client boundary separation."
+            />
 
-            <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-              <div className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-1">
-                Design System
-              </div>
-              <div className="text-base font-semibold text-zinc-900 dark:text-white">
-                Tailwind CSS
-              </div>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                Production-grade utility styling & theme
-              </p>
-            </div>
+            <Card
+              eyebrow="3D & WebGL Engine"
+              title="Three.js & Fiber"
+              description="Procedural 3D geometry with dynamic camera tracking and lightweight GPU footprint."
+            />
 
-            <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-              <div className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-1">
-                Code Quality
-              </div>
-              <div className="text-base font-semibold text-zinc-900 dark:text-white">
-                ESLint & Types
-              </div>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                Strict type safety and standardized linting
-              </p>
-            </div>
+            <Card
+              eyebrow="Future XR Ready"
+              title="XR-Compatible"
+              description="Clean decoupled architecture reserved for progressive WebXR, AR, and VR capabilities."
+            />
           </div>
         </div>
       </main>
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800 py-6 text-center text-xs text-zinc-500 dark:text-zinc-500">
-        Nexora AI &copy; {new Date().getFullYear()} &mdash; Milestone 1: Project Foundation
+        Nexora AI &copy; {new Date().getFullYear()} &mdash; Milestone 2: 3D Foundation Extension
       </footer>
     </div>
   );
