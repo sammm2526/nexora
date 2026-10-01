@@ -66,6 +66,12 @@ export const Navbar: React.FC = () => {
           >
             Explore
           </Button>
+          <a
+            href="/dashboard"
+            className="inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer select-none rounded-xl text-xs px-3.5 py-1.5 gap-1.5 bg-gradient-to-r from-indigo-500 via-indigo-600 to-violet-600 text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 border border-indigo-400/30"
+          >
+            Dashboard
+          </a>
         </div>
       </div>
     </header>
